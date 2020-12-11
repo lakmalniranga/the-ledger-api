@@ -37,3 +37,4 @@ Please note this project has been developed for a coding exercise.
     }
     ```
 1. Use in-line `if` statement, when possible
+1. Use [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
