@@ -3,6 +3,8 @@ import requestLogger from 'morgan';
 import cors from 'cors';
 
 import { logger } from '@services';
+import routerCallback from '@routerCallback';
+import { getLedger } from '@ledger/controller';
 
 const app = express();
 
@@ -17,6 +19,11 @@ app.use(
 	})
 );
 app.use(cors());
+
+/**
+ * API endpoints
+ */
+app.get('/ledger', routerCallback(getLedger));
 
 /**
  * Return errors with relevent HTTP status code

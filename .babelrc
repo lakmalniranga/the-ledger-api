@@ -17,7 +17,9 @@
 				"alias": {
 					"@config": "./configurations.js",
 					"@app": "./src/app.js",
-					"@services": "./src/services/index.js"
+					"@services": "./src/services/index.js",
+					"@routerCallback": "./src/helpers/router-callback.js",
+					"@ledger": "./src/modules/ledger"
 				}
 			}
 		]

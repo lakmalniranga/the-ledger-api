@@ -6,7 +6,7 @@ Please note this project has been developed for a coding exercise.
 
 1. The project requires node engine > `14.xx.xx`
 1. Run `yarn install`
-1. Populate a .env file with needed variables (check .env.example).
+1. Populate a `.env` file with needed variables (check `.env.example`)
 1. Run `yarn dev` to start development
 
 ## Scripts in package.json
@@ -21,7 +21,7 @@ Please note this project has been developed for a coding exercise.
 
 ## Notes
 
-1. Always use `yarn` over `npm`
+1. Always stick to `yarn`
 1. All functions should use `Named Parameters`
 1. Project uses babel to transpile the code which is in `src/` directory. The output is in `build` directory.
 1. Response data is enveloped:
@@ -36,3 +36,4 @@ Please note this project has been developed for a coding exercise.
     	...rest // any more data needed with this error
     }
     ```
+1. Use in-line `if` statement, when possible
