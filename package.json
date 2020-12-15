@@ -21,12 +21,10 @@
 		}
 	},
 	"lint-staged": {
-		"linters": {
-			"*.js": [
-				"yarn lint --color --fix",
-				"git add"
-			]
-		}
+		"*.js": [
+			"yarn lint --color --fix",
+			"git add"
+		]
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
