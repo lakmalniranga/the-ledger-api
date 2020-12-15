@@ -2,16 +2,17 @@ import express from 'express';
 import requestLogger from 'morgan';
 import cors from 'cors';
 
+import config from '@config';
 import { logger } from '@services';
-import routerCallback from '@routerCallback';
 import { getLedger } from '@ledger/controller';
+import routerCallback from '@helpers/router-callback';
 
 const app = express();
 
 /**
  * Middleware configuration for express
  */
-app.use(requestLogger('tiny'));
+if (!config.IS_TEST) app.use(requestLogger('tiny'));
 app.use(express.json());
 app.use(
 	express.urlencoded({
@@ -24,19 +25,6 @@ app.use(cors());
  * API endpoints
  */
 app.get('/ledger', routerCallback(getLedger));
-
-/**
- * Return errors with relevent HTTP status code
- */
-app.use(function (error, req, res, next) {
-	if (!res.headersSent && error.statusCode) {
-		res.status(error.statusCode).send({
-			error: error,
-		});
-	} else {
-		next(error);
-	}
-});
 
 /**
  * Event listener for unhandled exception.

@@ -10,7 +10,9 @@
 		"dev": "touch build/main.js && npm-run-all -p watch nodemon",
 		"watch": "yarn build:dev --watch",
 		"nodemon": "nodemon --inspect build/main.js",
-		"lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore"
+		"lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore",
+		"test": "jest  --maxWorkers=2 --detectOpenHandles --forceExit --config jest.config.js",
+		"test:watch": "yarn test --watch"
 	},
 	"husky": {
 		"hooks": {
@@ -49,14 +51,19 @@
 		"nodemon": "^2.0.6",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.2.1",
+		"supertest": "^6.0.1",
 		"webpack": "^5.10.0",
 		"webpack-cli": "^4.2.0",
 		"webpack-node-externals": "^2.5.2"
 	},
 	"dependencies": {
+		"@hapi/joi": "^17.1.1",
 		"cors": "^2.8.5",
+		"date-fns": "^2.16.1",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
+		"http-status-codes": "^2.1.4",
+		"joi-tz": "^4.0.2",
 		"morgan": "^1.10.0"
 	}
 }

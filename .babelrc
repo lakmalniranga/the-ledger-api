@@ -17,9 +17,12 @@
 				"alias": {
 					"@config": "./configurations.js",
 					"@app": "./src/app.js",
+					"@common": "./src/common",
 					"@services": "./src/services/index.js",
 					"@routerCallback": "./src/helpers/router-callback.js",
-					"@ledger": "./src/modules/ledger"
+					"@ledger": "./src/modules/ledger",
+					"@utils": "./src/utils",
+					"@helpers": "./src/helpers",
 				}
 			}
 		]

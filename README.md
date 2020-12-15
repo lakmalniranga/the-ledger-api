@@ -18,6 +18,7 @@ Please note this project has been developed for a coding exercise.
 -   `nodemon` Runs the dev server. it's used by `dev` script.
 -   `lint` Exports eslint command and requries a file/dir path to lint
 -   `test` Runs jest tests
+-   `test:watch` Runs jest tests with --watch
 
 ## Notes
 
@@ -37,4 +38,4 @@ Please note this project has been developed for a coding exercise.
     }
     ```
 1. Use in-line `if` statement, when possible
-1. Use [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+1. Use [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html), But don't over do!
